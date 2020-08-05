@@ -30,9 +30,9 @@
    }
   },
   "product-price": {
-    "props": {
-      "showSavings": true,
-      "showListPrice": false
-    }
-  }
+   "props": {
+     "showSavings": true,
+     "showListPrice": false
+   }
+ }
 }
