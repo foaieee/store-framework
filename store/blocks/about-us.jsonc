@@ -1,40 +1,70 @@
 {
     "store.custom#about-us": {
       "blocks": [
-        "flex-layout.row#about-us"
+        "tab-layout#home"
       ]
     },
-    "flex-layout.row#about-us": {
-      "children": [
-        "image#about-us",
-        "flex-layout.col#text-about-us"
+    "tab-layout#home":{
+      "children":[
+        "tab-list#home",
+        "tab-content#home"
       ]
     },
-    "flex-layout.col#text-about-us": {
+    "tab-list#home":{
+      "children":[
+        "tab-list.item#home1",
+        "tab-list.item#home2"
+      ]
+    },
+    "tab-content#home":{
       "children": [
-        "rich-text#about-title",
-        "rich-text#about-content"
+        "tab-content.item#1",
+        "tab-content.item#2"
+        ]
+    },
+    "tab-content.item#1": {
+      "children": [
+        "rich-text#home1"
       ],
-          "props": {
-        "preventVerticalStretch": true
+      "props": {
+        "tabId": "majorAppliances"
       }
     },
-   "rich-text#about-title": {
+    "tab-content.item#2": {
+      "children": [
+        "rich-text#home2"
+      ],
       "props": {
-        "text":
-        "# About FlatFlat"
+        "tabId": "electronics"
       }
     },
-    "rich-text#about-content": {
+    "tab-list.item#home1":{
       "props": {
-        "text":
-        " FlatFlat is an electronics store with a long standing tradition for creating modern and vintage items. Out objective is to create home appliances that make your house stand out, no matter your style. Merely 2 months old, we're already the store with the most beautiful products among all VTEX stores. We are currently building our site with the aim of giving our customers an unforgetable experience with our brand!"
+        "tabId": "majorAppliances",
+        "label": "Major Appliances",
+        "defaultActiveTab": true
       }
     },
-    "image#about-us": {
+    "tab-list.item#home2":{
       "props": {
-        "src": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-about-us.png",
-        "maxHeight": "600px"
+        "tabId": "electronics",
+        "label": "Electronics"
+      }
+    },
+    "rich-text#home1": {
+      "props": {
+        "text": "Área do conteúdo da tab-list.item com  tabId = majorAppliances",
+        "textPosition": "CENTER",
+        "font": "t-heading-3"
+      }
+    },
+    "rich-text#home2": {
+      "props": {
+        "text": "Área do conteúdo da tab-list.item com  tabId = electronics",
+        "textPosition": "CENTER",
+        "font": "t-heading-3"
       }
     }
    }
+
+   
