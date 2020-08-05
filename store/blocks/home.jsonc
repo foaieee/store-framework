@@ -3,5 +3,11 @@
     "blocks": [
       "store.product"
     ]
-  }
+  },
+  "product-price": {
+   "props": {
+     "showSavings": true,
+     "showListPrice": false
+   }
+ }
 }
